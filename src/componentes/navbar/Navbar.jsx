@@ -1,9 +1,12 @@
+import Button from "@mui/material/Button";
 import NavListDrawer from "../NavListDrawer";
 
 const Navbar = () => {
     return ( 
         <>
-            <NavListDrawer />
+            <Button variant='contained'>Open Dreawer</Button>
+
+           {/*<NavListDrawer /> */} 
         </>
      );
 }
