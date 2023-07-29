@@ -6,7 +6,7 @@ import  ListItemButton  from "@mui/material/ListItemButton";
 
 const NavListDrawer = () => {
     return ( 
-        <Box sx={{width: 250, bgcolor: 'lightsalmon'}}>
+        <Box sx={{width: 200}}>
             <nav>
                 <List>
                     <ListItem>

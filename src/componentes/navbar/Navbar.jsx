@@ -1,12 +1,18 @@
+import React, {useState} from "react";
 import Button from "@mui/material/Button";
 import NavListDrawer from "../NavListDrawer";
+import Drawer from "@mui/material/Drawer";
 
 const Navbar = () => {
+    const  [open, setOpen] = useState(false);
+    
     return ( 
         <>
-            <Button variant='contained'>Open Dreawer</Button>
+            <Button variant='contained' onClick={() =>setOpen(true)}>Open Dreawer</Button>
 
-           {/*<NavListDrawer /> */} 
+            <Drawer open={open} anchor="left" onClose={() => setOpen(false)}>
+                <NavListDrawer />
+            </Drawer>
         </>
      );
 }
