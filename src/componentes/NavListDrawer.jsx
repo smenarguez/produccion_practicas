@@ -4,15 +4,15 @@ import ListItem  from "@mui/material/ListItem";
 import ListItemText  from "@mui/material/ListItemText";
 import  ListItemButton  from "@mui/material/ListItemButton";
 
-const NavListDrawer = ({navlinks}) => {
+const NavListDrawer = ({navArrayLinks, NavLink, setOpen}) => {
     return ( 
         <Box sx={{width: 200}}>
             <nav>
                 <List>
                     {
-                        navlinks.map(item => (
+                        navArrayLinks.map(item => (
                             <ListItem key={item.title}>
-                                <ListItemButton component="a" href={item.path}>
+                                <ListItemButton component={NavLink} to={item.path} onClick={() => setOpen(false)}>
                                     <ListItemText>{item.title}</ListItemText>
                                 </ListItemButton>
                             </ListItem>
