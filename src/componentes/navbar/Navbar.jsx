@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = ({navArrayLinks}) => {
     const [open, setOpen] = useState(false);
-
+    
     return ( 
         <>
             <Drawer 
@@ -20,7 +20,7 @@ const Navbar = ({navArrayLinks}) => {
                 <NavListDrawer navArrayLinks={navArrayLinks} NavLink={NavLink} setOpen={setOpen} />
             </Drawer>
 
-            <AppBar position='static'>
+            <AppBar position='static' color="transparent"  sx={{border: 0, boxShadow: 0}}>
                 <Toolbar>
                     <ListItemButton onClick={() => setOpen(true)} sx={{display: {xs: 'flex', md: 'none'}}}>
                         <ListItemText>Menu de navegación</ListItemText>
@@ -28,16 +28,16 @@ const Navbar = ({navArrayLinks}) => {
 
                     <Box sx={{display: {xs: 'none', md: 'block'}}}>
                         {
-                        navArrayLinks.map(item => (
-                                <Button 
-                                    component={NavLink}
-                                    to={item.path} 
-                                    color='inherit' 
-                                    key={item.title}
-                                >
-                                    {item.title}
-                                </Button>
-                        ))
+                            navArrayLinks.map(item => (
+                                    <Button
+                                        component={NavLink}
+                                        to={item.path} 
+                                        color='inherit'
+                                        key={item.title}
+                                    >
+                                        {item.title}
+                                    </Button>
+                            ))
                         }
                     </Box>
                    
