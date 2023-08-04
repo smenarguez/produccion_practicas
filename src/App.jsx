@@ -8,7 +8,6 @@ import { Route, Routes } from 'react-router-dom';
 import Header from './componentes/Header';
 
 function App() {
-  console.log('Hola 23');
   return (
     <>
       <Container sx={{boxShadow: 3, pb: 2, mt: 4}}>

@@ -23,7 +23,7 @@ const Navbar = ({navArrayLinks}) => {
             <AppBar position='static' color="transparent"  sx={{border: 0, boxShadow: 0}}>
                 <Toolbar>
                     <ListItemButton onClick={() => setOpen(true)} sx={{display: {xs: 'flex', md: 'none'}}}>
-                        <ListItemText>Menu de navegación</ListItemText>
+                        <ListItemText>Navegación</ListItemText>
                     </ListItemButton> 
 
                     <Box sx={{display: {xs: 'none', md: 'block'}}}>
@@ -32,7 +32,7 @@ const Navbar = ({navArrayLinks}) => {
                                     <Button
                                         component={NavLink}
                                         to={item.path} 
-                                        color='inherit'
+                                        color="primary"
                                         key={item.title}
                                     >
                                         {item.title}
