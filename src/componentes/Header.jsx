@@ -14,10 +14,6 @@ const Header = () => {
         },
     
         {
-            title: 'Consulta de clima', path: '/consulta-de-clima'
-        },
-    
-        {
             title: 'Juego de tronos', path: '/juego-de-tronos'
         }
     ]
