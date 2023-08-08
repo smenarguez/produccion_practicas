@@ -10,7 +10,7 @@ const Inicio = () => {
             <Grid item xs={12} sm={12} md={12}>
                 <Typography  component='h1' sx={{ml: 7, mt: 2}}>
                     Se utiliza Material UI para la interfaz, React Router para el enrutamiento y
-                    tanto Axios como Fetch para consumir las API.
+                    la librería Axios para consumir las API.
                 </Typography>
             </Grid>
 

@@ -1,5 +1,5 @@
 import React, {useState, useEffect}  from "react";
-import {Container, Button, Typography, Box}  from '@mui/material/';
+import {Container, Button, Typography, Box, Grid}  from '@mui/material/';
 import axios from "axios";
 
 const baseUrl = 'https://thronesapi.com/api/v2/Characters';
@@ -29,12 +29,14 @@ const JuegoDeTronos = () => {
         setIndice(result);
     }
 
+    //<Container sx={{border: '3', boxShadow: 3, pb: 2, mt: 4}}>
+
     return ( 
         <>
-        <Container sx={{border: '3', boxShadow: 3, pb: 2, mt: 4}}>
-
-            <Box sx={{ml: 9}}>
-
+        
+        <Grid container>
+            <Grid item>
+            <Box sx={{ml: 7}}>
                 <Typography
                     variant="h5"
                     component='h5'
@@ -52,8 +54,10 @@ const JuegoDeTronos = () => {
                     Mostrar personaje
                 </Button>
             </Box>
-
-            <Box sx={{ml: 39}}>
+            </Grid>
+       
+            <Grid item  xs={12} sm={12} md={6} xl={4}>
+            <Box sx={{ml: 4, mt: 4, mb: 19}}>
     
                 {
                     (actores[indice])
@@ -68,7 +72,8 @@ const JuegoDeTronos = () => {
                 }
 
             </Box>
-       </Container>
+            </Grid>
+        </Grid>
         </>
      );
 }
