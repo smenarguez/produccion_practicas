@@ -13,6 +13,7 @@ function App() {
         <Header />
 
          <Routes>
+            <Route path='/' element={<Inicio />} />
             <Route path='/inicio' element={<Inicio />} />
             <Route path='/buscador-crypto' element={<BuscadorCrypto />} />
             <Route path='/juego-de-tronos' element={<JuegoDeTronos />} />
